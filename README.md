@@ -7,4 +7,4 @@
 <a href="https://www.notion.so/seongchanko/4-Spark-47a4788ffbbf43958d5196c067e86b6b">4장. 클러스터에서 Spark 실행</a> <br>
 <a href="https://www.notion.so/seongchanko/5-Spark-ML-f07b63e911dc48eab29d69d4190104f5">5장. Spark ML을 사용한 머신러닝</a> <br>
 <a href="https://www.notion.so/seongchanko/6-Spark-GraphX-0777861703fa416989325b0da50e0428">6장. Spark 스트리밍, 구조적 스트리밍 및 GraphX</a> <br>
-<a href="https://www.notion.so/seongchanko/f664a70b53154780a1af3f0c4dd57cb9">기타 참고사항</a>
+<a href="https://www.notion.so/seongchanko/f664a70b53154780a1af3f0c4dd57cb9">기타. 참고사항</a>
