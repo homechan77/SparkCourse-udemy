@@ -10,12 +10,16 @@ def parseLine(line):
     temperature = float(fields[3]) * 0.1 * (9.0 / 5.0) + 32.0
     return (stationID, entryType, temperature)
 
-lines = sc.textFile("file:///SparkCourse/1800.csv")
+lines = sc.textFile("file:///home/ko/workspace/SparkCourse/1800.csv")
 parsedLines = lines.map(parseLine)
-minTemps = parsedLines.filter(lambda x: "TMIN" in x[1])
-stationTemps = minTemps.map(lambda x: (x[0], x[2]))
-minTemps = stationTemps.reduceByKey(lambda x, y: min(x,y))
-results = minTemps.collect();
+# minTemps = parsedLines.filter(lambda x: "TMIN" in x[1])
+maxTemps = parsedLines.filter(lambda x: "TMAX" in x[1])
+# stationTemps = minTemps.map(lambda x: (x[0], x[2]))
+stationTemps = maxTemps.map(lambda x: (x[0], x[2]))
+# minTemps = stationTemps.reduceByKey(lambda x, y: min(x,y))
+maxTemps = stationTemps.reduceByKey(lambda x, y: max(x, y))
+# results = minTemps.collect();
+results = maxTemps.collect();
 
 for result in results:
     print(result[0] + "\t{:.2f}F".format(result[1]))
