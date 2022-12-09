@@ -7,7 +7,7 @@ def normalizeWords(text):
 conf = SparkConf().setMaster("local").setAppName("WordCount")
 sc = SparkContext(conf = conf)
 
-input = sc.textFile("file:///sparkcourse/book.txt")
+input = sc.textFile("file:///home/ko/workspace/SparkCourse/book.txt")
 words = input.flatMap(normalizeWords)
 wordCounts = words.countByValue()
 
