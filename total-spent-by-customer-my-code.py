@@ -15,4 +15,4 @@ sortreversedkv = keyvalues.map(lambda x: (x[1], x[0])).sortByKey()
 results = sortreversedkv.collect()
 
 for i, j in results:
-    print("CustomerID: %d ~ \t Sum: %.2f" % (j, round(i, 2)))
+    print("CustomerID: %d  \t Sum: %.2f" % (j, round(i, 2)))
