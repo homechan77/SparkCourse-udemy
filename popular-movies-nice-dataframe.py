@@ -39,6 +39,7 @@ movieCounts = moviesDF.groupBy("movieID").count()
 def lookupName(movieID):
     return nameDict.value[movieID]
 
+
 lookupNameUDF = func.udf(lookupName)
 
 # Add a movieTitle column using our new udf
